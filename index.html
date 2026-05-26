@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vikash Kumar — PhD Candidate, Ivey Business School</title>
-    <meta name="description" content="Vikash Kumar is a PhD Candidate in Operations Management at the Ivey Business School, Western University. His research in <strong>sustainable operations</strong> asks a central question: given a policy framework intended to accelerate the green transition, how do firms actually respond, how do myopic consumers actually choose, and what does this mean for the environmental and social outcomes policymakers care about? His current projects span electric vehicle adoption, circular battery supply chains, and fleet electrification in public food distribution, combining analytical modelling and empirical methods. His work identifies mechanism designs that close the gap between policy intent and realised outcomes. His research is supervised by Gal Raz and Deishin Lee.">
+    <meta name="description" content="Vikash Kumar is a PhD Candidate in Operations Management at the Ivey Business School, Western University. His research in sustainable operations examines firm responses to environmental policy frameworks and the resulting economic, environmental, and social outcomes.">
     <meta name="author" content="Vikash Kumar">
 
     <!-- Open Graph for link previews -->
     <meta property="og:title" content="Vikash Kumar — PhD Candidate, Ivey Business School">
-    <meta property="og:description" content="Research on sustainable operations, EV policy design, circular supply chains, and food security.">
+    <meta property="og:description" content="Research on sustainable operations, the green transition, and mechanism design.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vikashkumar.com">
+    <meta property="og:url" content="https://vikash-kumar.com">
 
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,13 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* ======================================================
-           DESIGN TOKENS — change these to re-theme the whole site
-           ====================================================== */
         :root {
             --ivey-green: #034638;
             --ivey-green-light: #0a6b54;
-            --accent: #c8aa6e;          /* warm gold accent */
+            --accent: #c8aa6e;
             --text: #1a1a1a;
             --text-muted: #555;
             --text-light: #888;
@@ -35,11 +32,7 @@
             --max-width: 820px;
         }
 
-        /* ======================================================
-           RESET & BASE
-           ====================================================== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -59,9 +52,6 @@
         }
         a:hover { border-bottom-color: var(--ivey-green); }
 
-        /* ======================================================
-           STICKY TOP NAV
-           ====================================================== */
         nav {
             position: sticky;
             top: 0;
@@ -80,62 +70,23 @@
             flex-wrap: wrap;
             gap: 12px;
         }
-        nav .brand {
-            font-weight: 600;
-            color: var(--text);
-            font-size: 0.95rem;
-        }
-        nav ul {
-            display: flex;
-            gap: 24px;
-            list-style: none;
-        }
-        nav ul a {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
+        nav .brand { font-weight: 600; color: var(--text); font-size: 0.95rem; }
+        nav ul { display: flex; gap: 24px; list-style: none; }
+        nav ul a { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
         nav ul a:hover { color: var(--ivey-green); }
 
-        /* ======================================================
-           LAYOUT
-           ====================================================== */
         main {
             max-width: var(--max-width);
             margin: 0 auto;
             padding: 60px 24px 80px;
         }
-
         section { margin-bottom: 72px; }
 
-        h1 {
-            font-size: 2.4rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text);
-            margin-bottom: 8px;
-        }
-        h2 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--ivey-green);
-            margin-bottom: 24px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--border);
-            letter-spacing: -0.01em;
-        }
-        h3 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 6px;
-        }
-
+        h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text); margin-bottom: 8px; }
+        h2 { font-size: 1.4rem; font-weight: 600; color: var(--ivey-green); margin-bottom: 24px; padding-bottom: 8px; border-bottom: 2px solid var(--border); letter-spacing: -0.01em; }
+        h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
         p { margin-bottom: 14px; color: var(--text-muted); }
 
-        /* ======================================================
-           HERO / ABOUT
-           ====================================================== */
         .hero {
             display: flex;
             gap: 40px;
@@ -159,30 +110,18 @@
             padding: 12px;
             overflow: hidden;
         }
-        .hero-photo img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    object-position: center;
-    display: block;
-}
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
         .hero-text { flex: 1; min-width: 260px; }
-        .hero-text .role {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 4px;
-        }
-        .hero-text .affiliation {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-        }
-        .keywords {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
+        .hero-text .role { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 4px; }
+        .hero-text .affiliation { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px; }
+
+        .keywords { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
         .keyword {
             background: var(--bg-soft);
             color: var(--ivey-green);
@@ -205,9 +144,6 @@
         .contact-row a { color: var(--text-muted); }
         .contact-row a:hover { color: var(--ivey-green); }
 
-        /* ======================================================
-           NEWS
-           ====================================================== */
         .news-item {
             display: flex;
             gap: 16px;
@@ -216,18 +152,9 @@
             font-size: 0.92rem;
         }
         .news-item:last-child { border-bottom: none; }
-        .news-date {
-            color: var(--text-light);
-            min-width: 90px;
-            font-variant-numeric: tabular-nums;
-            font-size: 0.85rem;
-            padding-top: 2px;
-        }
+        .news-date { color: var(--text-light); min-width: 90px; font-variant-numeric: tabular-nums; font-size: 0.85rem; padding-top: 2px; }
         .news-text { flex: 1; color: var(--text-muted); }
 
-        /* ======================================================
-           RESEARCH
-           ====================================================== */
         .paper {
             margin-bottom: 28px;
             padding-left: 16px;
@@ -235,17 +162,8 @@
             transition: border-color 0.2s ease;
         }
         .paper:hover { border-left-color: var(--ivey-green); }
-        .paper-title {
-            font-weight: 600;
-            color: var(--text);
-            font-size: 1rem;
-            margin-bottom: 4px;
-        }
-        .paper-authors {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 6px;
-        }
+        .paper-title { font-weight: 600; color: var(--text); font-size: 1rem; margin-bottom: 4px; }
+        .paper-authors { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 6px; }
         .paper-status {
             display: inline-block;
             font-size: 0.78rem;
@@ -256,34 +174,11 @@
             font-weight: 500;
             margin-bottom: 8px;
         }
-        .paper-abstract {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        .paper-meta {
-            color: var(--text-light);
-            font-size: 0.82rem;
-            margin-top: 6px;
-            font-style: italic;
-        }
+        .paper-abstract { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+        .paper-meta { color: var(--text-light); font-size: 0.82rem; margin-top: 6px; font-style: italic; }
 
-        /* ======================================================
-           CV / OTHER LISTS
-           ====================================================== */
-        .cv-item {
-            display: flex;
-            gap: 16px;
-            padding: 8px 0;
-            font-size: 0.93rem;
-        }
-        .cv-year {
-            color: var(--text-light);
-            min-width: 110px;
-            font-variant-numeric: tabular-nums;
-            font-size: 0.88rem;
-            padding-top: 2px;
-        }
+        .cv-item { display: flex; gap: 16px; padding: 8px 0; font-size: 0.93rem; }
+        .cv-year { color: var(--text-light); min-width: 110px; font-variant-numeric: tabular-nums; font-size: 0.88rem; padding-top: 2px; }
         .cv-text { flex: 1; }
         .cv-text strong { color: var(--text); font-weight: 600; }
         .cv-text .detail { color: var(--text-muted); font-size: 0.88rem; }
@@ -302,9 +197,6 @@
         }
         .download-cv:hover { background: var(--ivey-green-light); }
 
-        /* ======================================================
-           FOOTER
-           ====================================================== */
         footer {
             max-width: var(--max-width);
             margin: 0 auto;
@@ -315,9 +207,6 @@
             text-align: center;
         }
 
-        /* ======================================================
-           MOBILE
-           ====================================================== */
         @media (max-width: 640px) {
             h1 { font-size: 1.9rem; }
             h2 { font-size: 1.2rem; }
@@ -360,15 +249,15 @@
             <p class="affiliation">Ivey Business School · Western University</p>
             <div class="keywords">
                 <span class="keyword">Sustainable Operations</span>
-                <span class="keyword">Policy Design</span>
-                <span class="keyword">Circular Supply Chains</span>
+                <span class="keyword">Green Transition</span>
+                <span class="keyword">Mechanism Design</span>
             </div>
         </div>
     </div>
 
     <div class="bio">
         <p>
-            Vikash Kumar is a PhD Candidate in Operations Management at the Ivey Business School, Western University. His research in <strong>sustainable operations</strong> asks a central question: given a policy framework intended to accelerate the green transition, how do firms actually respond, how do myopic consumers actually choose, and what does this mean for the environmental and social outcomes policymakers care about? His current projects span electric vehicle adoption, circular battery supply chains, and fleet electrification in public food distribution, combining analytical modelling and empirical methods. His work identifies mechanism designs that close the gap between policy intent and realised outcomes. His research is supervised by <a href="https://www.ivey.uwo.ca/faculty_research/directory/gal-raz/" target="_blank" rel="noopener noreferrer">Gal Raz</a> and <a href="https://www.ivey.uwo.ca/faculty_research/directory/deishin-lee/" target="_blank" rel="noopener noreferrer">Deishin Lee.
+            Vikash Kumar is a PhD Candidate in Operations Management at the Ivey Business School, Western University. His research in <strong>sustainable operations</strong> asks a central question: given a policy framework intended to accelerate the green transition, how do firms actually respond, how do myopic consumers actually choose, and what does this mean for the environmental and social outcomes policymakers care about? His current projects span electric vehicle adoption, circular battery supply chains, and fleet electrification in public food distribution, combining analytical modelling and empirical methods. His work identifies mechanism designs that close the gap between policy intent and realised outcomes. His research is supervised by <a href="https://www.ivey.uwo.ca/faculty_research/directory/gal-raz/" target="_blank" rel="noopener noreferrer">Gal Raz</a> and <a href="https://www.ivey.uwo.ca/faculty_research/directory/deishin-lee/" target="_blank" rel="noopener noreferrer">Deishin Lee</a>.
         </p>
         <p>
             Before the PhD, he spent seven years at the Steel Authority of India Ltd. (SAIL), managing $2.5M EPC projects and leading digital transformation initiatives. He holds an MBA from IE Business School (top 10%, Beta Gamma Sigma) and a B.Tech from IIT (BHU) Varanasi.
@@ -376,9 +265,8 @@
 
         <div class="contact-row">
             <a href="mailto:vkumar.phd@ivey.ca">✉ vkumar.phd@ivey.ca</a>
-            <a href="https://www.linkedin.com/in/vikash-kumar-ivey/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/vikash-kumar-ivey/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://scholar.google.com/citations?user=OL2zAWsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-    
             <a href="https://orcid.org/0000-0002-9149-6413" target="_blank" rel="noopener noreferrer">ORCID</a>
         </div>
     </div>
@@ -416,41 +304,39 @@
     <div class="paper">
         <div class="paper-title">Closing the Loop on EV Batteries: Impact of Extended Producer Responsibility Policy on Recycling and Second-Life Repurposing Strategies</div>
         <div class="paper-authors">with Jay Nguyen</div>
-        <span class="paper-status">Final manuscript — ready for submission</span>
+        <span class="paper-status">Working paper, 2026</span>
         <p class="paper-abstract">
             We study how Extended Producer Responsibility (EPR) mandates shape battery manufacturers' choices between recycling and second-life repurposing. We show that under certain conditions, well-intentioned EPR policies can produce worse environmental outcomes than no policy at all, with implications for circular-economy regulation design.
         </p>
-        <p class="paper-meta">Target: M&amp;SOM, by Winter 2026 · Funded by SSHRC Insight Grant 2024</p>
+        <p class="paper-meta">Funded by SSHRC Insight Grant 2024</p>
     </div>
 
     <div class="paper">
         <div class="paper-title">Alleviating Consumer Anxiety for EVs: Balancing Vehicle Range and Charging Network</div>
         <div class="paper-authors">with Gal Raz</div>
-        <span class="paper-status">Model complete · Behavioral experiment in progress</span>
+        <span class="paper-status">Working paper, 2026</span>
         <p class="paper-abstract">
             Range anxiety and sparse charging infrastructure remain the two largest barriers to EV adoption. We develop a model of consumer choice between range and charging access and complement it with a behavioral experiment, with implications for product design and infrastructure policy.
         </p>
-        <p class="paper-meta">Target: Production and Operations Management, by Summer 2026 · Funded by SSHRC Insight Grant 2024</p>
+        <p class="paper-meta">Funded by SSHRC Insight Grant 2024</p>
     </div>
 
     <div class="paper">
         <div class="paper-title">Designing Effective Policies for Driving Electric Vehicle Adoption</div>
         <div class="paper-authors">with Gal Raz</div>
-        <span class="paper-status">Analysis complete · Writing in progress</span>
+        <span class="paper-status">Working paper, 2026</span>
         <p class="paper-abstract">
             We compare product-based (flat per-vehicle) and attribute-based (range-linked) EV subsidies and show that while attribute-based designs accelerate adoption, uncapped versions can erode welfare and environmental outcomes. We characterise conditions under which a cap on the range-linked subsidy is welfare-improving.
         </p>
-        <p class="paper-meta">Target: M&amp;SOM, by Summer 2026</p>
     </div>
 
     <div class="paper">
         <div class="paper-title">Fleet Electrification in Public Food Distribution: Carbon Credit Incentives vs. Transition Mandates</div>
         <div class="paper-authors">with Gal Raz, Saurabh K. Jhakar, Atalay Kohar</div>
-        <span class="paper-status">Model development &amp; analysis in progress</span>
+        <span class="paper-status">Working paper, 2026</span>
         <p class="paper-abstract">
             India's Food Corporation moves grain to 800 million beneficiaries on a diesel fleet now targeted for electrification. We model the three-tier Public Distribution System and compare carbon-credit incentives against binding electrification mandates, asking when fleet decarbonisation improves — and when it erodes — food security in developing economies.
         </p>
-        <p class="paper-meta">Target: M&amp;SOM, by Spring 2026</p>
     </div>
 
     <h2 style="margin-top: 56px;">Works in Progress</h2>
@@ -564,7 +450,7 @@
 <section id="contact">
     <h2>Contact</h2>
     <p>
-        I welcome conversations about sustainable operations, policy design, and the green transition.<br>
+        I welcome conversations about sustainable operations, the green transition, and mechanism design.<br>
         The best way to reach me is by email.
     </p>
     <div class="contact-row" style="margin-top: 16px;">
